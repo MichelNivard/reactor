@@ -56,7 +56,7 @@ format_cell <- function(cell) {
 start_reactor <- function(notebook) {
   server <- startServer(
     host = "0.0.0.0",
-    port = 5000,
+    port = 5001,
     app = list(
       call = function(req) {
         if(req$PATH_INFO == "/export") {
@@ -182,7 +182,7 @@ start_reactor <- function(notebook) {
     )
   )
   
-  utils::browseURL("http://localhost:5000")
+  utils::browseURL("http://localhost:5001")
   
   return(server)
 }
